@@ -1,3 +1,10 @@
+# Python wheel generation case
+if(DEFINED SKBUILD_PROJECT_NAME)
+  include(${CMAKE_CURRENT_SOURCE_DIR}/wheel.cmake)
+  return()
+endif()
+
+# --------------------------------------------------------------------------
 project(vtkSlicer${MODULE_NAME}ModuleMRML)
 
 set(KIT ${PROJECT_NAME})

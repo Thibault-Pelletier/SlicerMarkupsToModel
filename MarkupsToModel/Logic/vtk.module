@@ -1,0 +1,10 @@
+NAME
+  SlicerMarkupsToModel::Logic
+LIBRARY_NAME
+  vtkSlicerMarkupsToModelModuleLogic
+DEPENDS
+  SlicerMarkupsToModel::MRML
+  Slicer::MarkupsModuleLogic
+  Slicer::BaseLogic
+DESCRIPTION
+  "vtkSlicerMarkupsToModelModuleLogic"

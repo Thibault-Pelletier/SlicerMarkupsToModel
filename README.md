@@ -115,3 +115,7 @@ Under **Tube Properties** you can change certain aspects of the curve model's ge
 
 - **Capping**: (Under Tube Properties) Changes if the ends of the output tube should be capped.
 
+# Building the wheel
+
+In a build environment, the wheel can be generated using the following command in the extension folder:
+- python.exe -m pip wheel . --extra-index-url "https://vtk.org/files/wheel-sdks"

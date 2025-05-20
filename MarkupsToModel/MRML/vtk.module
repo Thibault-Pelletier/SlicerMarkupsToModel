@@ -1,0 +1,9 @@
+NAME
+  SlicerMarkupsToModel::MRML
+LIBRARY_NAME
+  vtkSlicerMarkupsToModelModuleMRML
+DEPENDS
+  Slicer::MRMLDisplayableManager
+  Slicer::MarkupsModuleMRML
+DESCRIPTION
+  "vtkSlicerMarkupsToModelModuleMRML"

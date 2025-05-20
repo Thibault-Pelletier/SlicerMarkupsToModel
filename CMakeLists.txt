@@ -1,8 +1,21 @@
-cmake_minimum_required(VERSION 3.5)
-
-project(MarkupsToModel)
+cmake_minimum_required(VERSION 3.16.3...4.0)
 
 #-----------------------------------------------------------------------------
+# Python wheel generation case
+if(DEFINED SKBUILD_PROJECT_NAME)
+  project(${SKBUILD_PROJECT_NAME} VERSION ${SKBUILD_PROJECT_VERSION})
+  include(${CMAKE_CURRENT_SOURCE_DIR}/wheel.cmake)
+  return()
+endif()
+
+#-----------------------------------------------------------------------------
+project(MarkupsToModel)
+
+# disable https://cmake.org/cmake/help/latest/policy/CMP0148.html as vtkAddon may need it
+if(POLICY CMP0148)
+  cmake_policy(SET CMP0148 OLD)
+endif()
+
 # Extension meta-information
 set(EXTENSION_HOMEPAGE "https://github.com/SlicerIGT/MarkupsToModel")
 set(EXTENSION_CATEGORY "Informatics")
